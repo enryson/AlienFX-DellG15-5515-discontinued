@@ -1,0 +1,1 @@
+cp rules/10-alienfx.rules /etc/udev/rules.d/
