@@ -18,10 +18,7 @@ class Example:
         self.status_icon.connect("popup-menu", self.right_click_event)
 
         self.window = self.builder.get_object("window")
-        self.window.set_icon_from_file("/home/enryson/Documents/GitHub/AlienFX-DellG15-5515/ui/AlienLogoWhiteIcon.png")
-        # # self.window_label = self.builder.get_object("window_label")
-        # # self.window_label.set_icon_from_file("/home/enryson/Downloads/AlienLogoIcon.png")
-        # # self.window.set_icon_from_file("/home/enryson/Downloads/AlienLogoIcon.png")
+        self.window.set_icon_name("firefox")
         self.window.show_all()
         
         
