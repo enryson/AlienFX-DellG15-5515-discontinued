@@ -1,1 +1,18 @@
 cp rules/10-alienfx.rules /etc/udev/rules.d/
+#pip install darkdetect
+udevadm control --reload-rules && udevadm trigger
+# copy Icons
+cp ui/icons/16x16/*.png ~/.local/share/icons/hicolor/16x16/apps
+cp ui/icons/24x24/*.png ~/.local/share/icons/hicolor/24x24/apps
+cp ui/icons/32x32/*.png ~/.local/share/icons/hicolor/32x32/apps
+cp ui/icons/48x48/*.png ~/.local/share/icons/hicolor/48x48/apps
+cp ui/icons/64x64/*.png ~/.local/share/icons/hicolor/64x64/apps
+cp ui/icons/96x96/*.png ~/.local/share/icons/hicolor/96x96/apps
+cp ui/icons/128x128/*.png ~/.local/share/icons/hicolor/128x128/apps
+cp ui/icons/256x256/*.png ~/.local/share/icons/hicolor/256x256/apps
+cp ui/icons/512x512/*.png ~/.local/share/icons/hicolor/512x512/apps
+cp ui/icons/1024x1024/*.png ~/.local/share/icons/hicolor/1024x1024/apps
+
+gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
+
+cp *.desktop ~/.local/share/applications

@@ -14,11 +14,11 @@ class Example:
         self.builder.connect_signals(self)
         
         self.status_icon = Gtk.StatusIcon()
-        self.status_icon.set_from_file("/home/enryson/Documents/GitHub/AlienFX-DellG15-5515/ui/AlienLogoWhiteIcon.png")
+        self.status_icon.set_from_icon_name("AlienLogoDarkIcon")
         self.status_icon.connect("popup-menu", self.right_click_event)
 
         self.window = self.builder.get_object("window")
-        self.window.set_icon_name("firefox")
+        self.window.set_icon_name("AlienLogoDarkIcon")
         self.window.show_all()
         
         
