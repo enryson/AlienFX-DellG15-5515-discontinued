@@ -2,11 +2,6 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkStatusIcon">
-    <property name="stock">file:///home/enryson/Documents/GitHub/AlienFX-DellG15-5515/ui/AlienLogoIcon.png&#13;
-</property>
-    <property name="visible">False</property>
-  </object>
   <object class="GtkPopover" id="menu_popover">
     <property name="can-focus">False</property>
     <child>
@@ -30,6 +25,97 @@
           </packing>
         </child>
         <child>
+          <object class="GtkBox" id="menu_box1">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="border-width">6</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkModelButton" id="menu_color_red">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">Red</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkModelButton" id="menu_color_green">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">Green</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkModelButton" id="menu_color_blue">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">Blue</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkModelButton" id="menu_color_yellow">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">Yellow</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkModelButton" id="menu_color_purple">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">Purple</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkModelButton" id="menu_color_white">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="text" translatable="yes">white</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkSeparator" id="separator">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
@@ -37,7 +123,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">2</property>
           </packing>
         </child>
         <child>
@@ -51,7 +137,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
@@ -61,7 +147,6 @@
     <property name="can-focus">False</property>
     <property name="default-width">440</property>
     <property name="default-height">250</property>
-    <property name="icon-name">applications-internet</property>
     <signal name="destroy" handler="on_window_destroy" swapped="no"/>
     <child>
       <!-- n-columns=4 n-rows=1 -->
@@ -74,7 +159,7 @@
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
             <property name="title" translatable="yes">Zone1</property>
-            <property name="color">#5757e3e38989</property>
+            <property name="rgba">rgb(0,255,0)</property>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -87,7 +172,7 @@
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
             <property name="title" translatable="yes">Zone2</property>
-            <property name="color">#5757e3e38989</property>
+            <property name="rgba">rgb(0,255,0)</property>
           </object>
           <packing>
             <property name="left-attach">1</property>
@@ -100,7 +185,7 @@
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
             <property name="title" translatable="yes">Zone3</property>
-            <property name="color">#5757e3e38989</property>
+            <property name="rgba">rgb(0,255,0)</property>
           </object>
           <packing>
             <property name="left-attach">2</property>
@@ -113,7 +198,7 @@
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
             <property name="title" translatable="yes">Zone4</property>
-            <property name="color">#5757e3e38989</property>
+            <property name="rgba">rgb(0,255,0)</property>
           </object>
           <packing>
             <property name="left-attach">3</property>
@@ -131,11 +216,10 @@
         <property name="show-close-button">True</property>
         <child>
           <object class="GtkButton" id="button">
-            <property name="label">gtk-apply</property>
+            <property name="label">Apply</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <property name="use-stock">True</property>
             <signal name="clicked" handler="button_clicked" swapped="no"/>
           </object>
         </child>

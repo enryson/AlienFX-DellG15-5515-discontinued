@@ -21,7 +21,8 @@ def createConfig():
         "z1": [87, 227, 137],
         "z2": [87, 227, 137],
         "z3": [87, 227, 137],
-        "z4": [87, 227, 137]
+        "z4": [87, 227, 137],
+        "zall": [255, 255, 255]
     }
     # create folder on the local share folder
     if not os.path.exists(path):
@@ -55,13 +56,15 @@ def readConfig():
     z2 = decColor(config['z2'])
     z3 = decColor(config['z3'])
     z4 = decColor(config['z4'])
-    return z1, z2, z3, z4
+    zall = decColor(config['zall'])
+    return z1, z2, z3, z4, zall
 
-def updateConfig(zone1, zone2, zone3, zone4):
+def updateConfig(zone1, zone2, zone3, zone4, zoneAll):
     z1 = encColor(zone1)
     z2 = encColor(zone2)
     z3 = encColor(zone3)
     z4 = encColor(zone4)
+    zoneAll = encColor(zoneAll)
     try:
         loadConfig()
     except IOError:
@@ -73,6 +76,7 @@ def updateConfig(zone1, zone2, zone3, zone4):
         config['z2'] = z2
         config['z3'] = z3
         config['z4'] = z4
+        config['zall'] = zoneAll
         # write it back to the file
         with open(pathFile, 'w') as f:
             json.dump(config, f)

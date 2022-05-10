@@ -21,23 +21,41 @@ class Example:
         self.window.set_icon_name("AlienLogoDarkIcon")
         self.window.show_all()
         
-        
-        config = readConfig()
         self.colorZone1 = self.builder.get_object("Zone1")
         self.colorZone2 = self.builder.get_object("Zone2")
         self.colorZone3 = self.builder.get_object("Zone3")
         self.colorZone4 = self.builder.get_object("Zone4")
-        self.colorZone1.set_rgba(config[0])
-        self.colorZone2.set_rgba(config[1])
-        self.colorZone3.set_rgba(config[2])
-        self.colorZone4.set_rgba(config[3])
+        self.AllZones = self.builder.get_object("ZoneAll")
+        
+        config = readConfig()
+
+        self.AllZones.set_rgba(config[4])
+        self.beforeAllZones = self.AllZones.get_rgba()
+        if config[0] != config[4]:
+            self.colorZone1.set_rgba(config[0])
+            self.colorZone2.set_rgba(config[1])
+            self.colorZone3.set_rgba(config[2])
+            self.colorZone4.set_rgba(config[3])
+        else:
+            self.colorZone1.set_rgba(config[4])
+            self.colorZone2.set_rgba(config[4])
+            self.colorZone3.set_rgba(config[4])
+            self.colorZone4.set_rgba(config[4])
 
     def button_clicked(self, button):
-        zon1 = self.colorZone1.get_rgba()
-        zon2 = self.colorZone2.get_rgba()
-        zon3 = self.colorZone3.get_rgba()
-        zon4 = self.colorZone4.get_rgba()
-        updateConfig(zon1, zon2, zon3, zon4)
+        zonAll = self.AllZones.get_rgba()
+        if self.beforeAllZones == zonAll:
+            zon1 = self.colorZone1.get_rgba()
+            zon2 = self.colorZone2.get_rgba()
+            zon3 = self.colorZone3.get_rgba()
+            zon4 = self.colorZone4.get_rgba()
+        else:
+            zon1 = zon2 = zon3 = zon4 = self.AllZones.get_rgba()
+        self.colorZone1.set_rgba(zon1)
+        self.colorZone2.set_rgba(zon2)
+        self.colorZone3.set_rgba(zon3)
+        self.colorZone4.set_rgba(zon4)
+        updateConfig(zon1, zon2, zon3, zon4, zonAll)
         setColorRGB(zon1, zon2, zon3, zon4)
 
     def about_clicked(self, button):
