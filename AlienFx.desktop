@@ -2,8 +2,8 @@
 Version=1.0
 Name=AlienFX
 Comment=AlienFX
-Exec=python /home/enryson/Documents/GitHub/AlienFX-DellG15-5515/alienfx-gui.py
-Path=/home/enryson/Documents/GitHub/AlienFX-DellG15-5515/
+Exec=python /opt/alienfx/alienfx-gui.py
+Path=/opt/alienfx/
 Icon=AlienLogoDarkIcon
 Terminal=false
 Type=Application
