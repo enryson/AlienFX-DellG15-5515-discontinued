@@ -1,4 +1,4 @@
-cp rules/10-alienfx.rules /etc/udev/rules.d/
+cp rules/10-alienfx.rules /etc/udev/rules.d/400-alienfx.rules
 #pip install darkdetect
 udevadm control --reload-rules && udevadm trigger
 # copy Icons
@@ -28,7 +28,19 @@ gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
 
 cp *.desktop ~/.local/share/applications
 
-sudo pacman -S python-pyusb python-setuptools python-gobject python-cairo python-future acpid
+pacman -S python-pyusb python-setuptools python-gobject python-cairo python-future acpid
+
+pip install Pillow pyusb
 
 systemctl enable acpid.service
 systemctl start acpid.service
+
+mkdir /opt/alienfx
+cp -r * /opt/alienfx
+
+cp lidfix/handler.sh /etc/acpi/handler.sh 
+cp lidfix/laptop-lid.sh /etc/acpi/laptop-lid.sh
+cp lidfix/anything /etc/acpi/events/anything
+
+
+#runuser -l robot -c 'python /opt/alienfx/restoreConfig.py'
