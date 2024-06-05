@@ -1,3 +1,7 @@
+# DO NOT USE THIS SOFTWARE!
+I remade this software on C++ and is a way better implementation.
+
+[New Version](https://github.com/enryson/AlienFx-DellG15-5515-v2)
 # AlienFX for Dell G15 5515
 ## _GTK app for controling the keyboard lights_
 
